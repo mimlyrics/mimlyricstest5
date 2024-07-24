@@ -22,7 +22,7 @@ const DOWNLOAD_VIDEO_URL = "/api/v1/video/download";
 const SIMILAR_VIDEO_URL = "/api/v1/video"
 import axios from "../api/axios";
 
-import ReactPlayer from "react-player";
+//import ReactPlayer from "react-player";
 import Video from "./Video";
 // Custom Video
 import CustomVideo from "./CustomVideo";
@@ -339,7 +339,7 @@ const VideoStream = () => {
     setShowAnswerComment(false);
   }
 
-  const handleProgress = (e) => {
+  /*const handleProgress = (e) => {
     console.log(e.playedSeconds);    
     let progressX = (e.playedSeconds/duration) * 100;
     console.log(progressX);
@@ -408,7 +408,7 @@ const VideoStream = () => {
       setIsShort(sVideo[randomId].isShort);
     }, [path, title, views, createdAt, shares, downloads, isShort])
 
-    PlayNextVideo()*/
+    PlayNextVideo()
   }
 
   const ToggleVideo = () => {
@@ -420,7 +420,7 @@ const VideoStream = () => {
   }
 
   const videoWidth = `${100 - 25}%`
-  const videoHeight = `50%`
+  const videoHeight = `50%`*/
 
   return (
     <section className={ showSettings ? ` opacity-80 bg-zinc-200 z-50 mt-1 md:mt-2 md:ml-[20%] md:w-[97%]` 
@@ -436,7 +436,7 @@ const VideoStream = () => {
         
         {/** React Player */}
      
-      <div className="relative mx-[0%] h-[90%] bg-teal-600 ">
+          {/*<div className="relative mx-[0%] h-[90%] bg-teal-600 ">
         <ReactPlayer
           ref={videoRef}
           url={path}
@@ -449,7 +449,7 @@ const VideoStream = () => {
           width={'100%'} 
           height={'100%'}   
         />
-        {/** Control video */}
+        
         <div className=" h-[100%] w-[100%] absolute top-0 left-0">
           <div className="">
             <div className="cursor-pointer">
@@ -489,6 +489,10 @@ const VideoStream = () => {
             </div>
           </div>
         </div>
+      </div> */}
+
+      <div className="">
+        <video src={path} controls></video>/
       </div>
 
 

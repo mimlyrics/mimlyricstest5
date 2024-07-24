@@ -1,4 +1,3 @@
-import ReactPlayer from "react-player"
 import {useState, useEffect} from "react";
 
 const CustomVideo = ({path}) => {
@@ -10,10 +9,6 @@ const CustomVideo = ({path}) => {
   return (
     <section>
       
-    <ReactPlayer
-      playing={isPlaying}
-
-    />
     <h1>Yeah Negro</h1>
     </section>
   )
